@@ -6,7 +6,6 @@ import logging
 import requests
 import tldextract
 import validators
-from pprint import pp
 from typing import Union
 # from rake_nltk import Rake
 from bs4 import BeautifulSoup
@@ -237,9 +236,8 @@ class ArticleScraper:
             return text.strip()
         return text
 
-
-if __name__ == "__main__":
-    url = 'https://www.financialexpress.com/market/cafeinvest/buy-bpcl-sbi-life-hcl-tech-jsw-steel-charts-show-gains-in-near-term-nifty-above-15750-could-reclaim-16000/2576173/'
-    scraper = ArticleScraper(wait_time=5)
-    html = scraper.run(article_url=url)
-    pp(html)
+# Testing:
+# if __name__ == "__main__":
+#     url = 'https://www.financialexpress.com/market/cafeinvest/buy-bpcl-sbi-life-hcl-tech-jsw-steel-charts-show-gains-in-near-term-nifty-above-15750-could-reclaim-16000/2576173/'
+#     scraper = ArticleScraper(wait_time=5)
+#     html = scraper.run(article_url=url)
